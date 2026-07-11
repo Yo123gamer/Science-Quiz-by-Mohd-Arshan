@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Quiz | Mohd Arshan</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{height:100vh;display:flex;justify-content:center;align-items:center;overflow:hidden;background:radial-gradient(circle at top,#1e3c72,#0f2027,#000814)}
+body:before{content:'';position:absolute;width:300%;height:300%;background:radial-gradient(#4fc3f7 1px,transparent 1px);background-size:45px 45px;opacity:.25;animation:move 45s linear infinite}
+@keyframes move{from{transform:translate(0,0)}to{transform:translate(-400px,-300px)}}
+.card{position:relative;z-index:1;background:rgba(255,255,255,.08);backdrop-filter:blur(18px);padding:50px;border-radius:25px;text-align:center;border:1px solid rgba(255,255,255,.2);box-shadow:0 0 25px rgba(0,255,255,.25)}
+.logo{font-size:52px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+h1{color:#fff;text-shadow:0 0 15px cyan;margin:10px 0}
+h2{color:#8ff;font-weight:400;margin-bottom:30px}
+button{padding:16px 30px;border:none;border-radius:40px;background:linear-gradient(45deg,#00e5ff,#0066ff);color:#fff;font-size:18px;font-weight:bold;cursor:pointer;box-shadow:0 0 20px cyan,0 0 40px #08f;transition:.3s}
+button:hover{transform:scale(1.08)}
+.credit{margin-top:25px;color:#fff;opacity:.8;font-size:14px}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="logo">🧬</div>
+<h1>Made by Mohd Arshan</h1>
+<h2>Science Quiz Presentation</h2>
+<button onclick="downloadQuiz()">⬇ Click here to download Science Quiz</button>
+<div class="credit">Thank you for visiting!</div>
+</div>
+<script>
+function downloadQuiz(){
+ const a=document.createElement('a');
+ a.href='Science Quiz(by Arshan).pptx';
+ a.download='Science Quiz(by Arshan).pptx';
+ document.body.appendChild(a);
+ a.click();
+ a.remove();
+}
+</script>
+</body>
+</html>
